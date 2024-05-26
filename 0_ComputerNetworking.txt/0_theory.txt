@@ -1,0 +1,451 @@
+computer connected together => computer network
+
+----- how internet started?-------
+Russia ne sputnik kiya 
+to us ne arpa chalu kiya... .. starting mai 4 universities ko joda...
+
+www (world wide web) is an information system where documents and othere web resources are identified by
+URL(uniform resource locators ) which may be interlinked b hyperlinks, and are accessible over the internet.
+
+;ye saare rules wagera ...protocol wagera INternet society wale create aur manage karte hai...
+
+client requests...
+server response
+
+TCP (transmission control Protocol)    -> when we want ki our total message ek ek sabd receiver pe pahuche, then use...
+
+UDP (user datagram protocol) -> video call mai thode sabd lag bhi ho jaye to bhi baat to hoti rehti hai...
+
+HTTP -> how server will send data back, in sabke rules are written in http...
+
+packets ya chunkds maihi data transfer hota hai...
+
+jis tarah phonebook mai number ko name se associate kare dete hai... similarly internet mai website ko bhi name(domain)
+de dete hai..
+-> terminal mai jaake 
+       curl ifconfig.me -s                          likha to find our ip address...
+
+
+
+
+ISP (internet service provider) provides global IP address to modem/router       
+                further the router provides different different ip addresses to the devices attached to it using DHCP (dynamic host confighuration protocol)
+
+
+NAT (network access Translator )  se pata chalega ki akhiri mai kisne search kiya to bus usko hi dikhao...
+
+theek hai mobile mai packet to aa jaega inernet se but ek saath hum gaana bhi sun rahe hai chat bhi kar rahe hai...
+to ye kaise pata chalega ki kis application ko e wala packet chahiye....(ans: using port number)
+        -> iip addresees identifies the computer, and port number identifies the application.
+
+port  number aapka 16 bit ka hota hai => 2power 16   combinations possible around 65000
+
+but aap koi bhi port number aise hi apne liye nahi le sakte as there are reserved ports:
+    HTTp = 80
+mongo db = 27017
+sql = 1433
+
+0 - 1023 (reserved port)
+1024 - 49152 (reserved for applications)
+now remainging you cna use...#
+
+1 mbps = 10power6 bits per second...
+
+------ submarine cable map ----------------
+
+guided unguided media
+guided -> optical coaxial 
+wireless -> bluetooth, wifi , 5G
+
+LAN : small house /office -> ethernets, wifi,
+MAN; across a city 
+WAN: across countries
+          optical fibre calges...
+                   1. SONet -> synchoronous Optical networking
+                   2. Frame Relay (to connect LAN to WAN)
+
+modem -> converts the digital data into electrical signal....
+
+Tier 1 ISP of india is tata...
+
+---topologies---
+1. bus : all connected with backbone wire
+2. ring : 
+3. star: one central device connected to all other devices.
+4. treee: bus + star many star are connected with one bus....
+5. mesh topology: all connected with each other
+
+------ strucure of network -------OSI model-----------
+order -> amazon -> delivery -> transported -> India -> transport -> deliver company -> amazon -> received
+
+we only care about order and received...
+
+-----OSI model --------
+open system interconnection model...
+-7 layers ---
+
+1. application layer -> software 
+
+2. presentation layer -> tanslation takes place....provides abstraction-> ssh is used
+
+3. session layer -> authorization kar diya (payment on flipkart)
+
+4. transport layer -> data transfer, sequence number...speed dono side ki dekhega...
+
+5. network layer -> transmission of data with other computers.. router lives here..... every packet has ip address...
+
+6. data link layer
+
+7. physical layer -> physical addresses (mac address)   , works with cable, physical router se uske physical router mai de diya...
+
+mere upar se neeche 7 to uske neeche se upar tak 7 honge...
+
+--------- TCP/IP model (5 layers)
+
+1. application layer
+    -> user interacts with it, whatsapp, browser
+   -> lies on your device...
+
+
+2. transport layer
+3. network layer
+4. data link layer 
+5. physical layer
+
+
+
+packet will have ip address of both sender and receiver....
+
+---- all big companies have their multiple servers across the world...
+->.ping time     
+
+peer to peer communication -> every computer can serve as either client or either server..
+
+----protocols ---------
+1. web protocols 
+       tcp /ip 
+           -> http
+           -> dhcp
+           -> ftp
+           -> smtp
+            -> pop3 and IMAC   (to receive message)
+            -> SSH
+            -> VNC
+
+       telnet : port 23   -> enables to manage the device remotely...
+UDP -> stateless connection => data may get lost
+
+program : whatsapp
+process: send a message , record a video
+
+-> thread -> lighter version of process -> a single thread do only single work....
+-> sockets: interface betweent the process and internet.
+
+Ports: kis tab pe data bheju? soln -> ephemeral ports
+
+
+HTTP : it is a client server protocol which will decide how the client request to server and then how the server response to client...
+   HTTP is a stateless protocol => matlab har new request will be treated as if it is requested by some new fresh user.
+HTTp in transport layer , TCP aapka in transport layer....
+
+
+
+HTTP uses TCP inside
+
+ek website pe har cheej ka uniqye link hota hai... 
+
+---- HTTP methods--------
+1. get -> requesting some data.
+2. post -> sending  
+3. put -> 
+4. delete -> 
+
+----- status codes/ error codes ------
+1xx -> 100 ki range mai aapka informational 
+2xx -> success
+3xx -> redirecting
+4xx -> client error
+5xx -> server error
+
+
+-- aap keh rahe ho har search stateless hota hai...then ye login cart recommendation wala sab feature kaise dikhta hai 
+even after closing the tab and reopening it....(ans: cookies)
+
+cookies (unique string) -> stored in my browser
+
+3rd party cookies -> 
+
+
+-------hwo email works?
+-> to send email SMTP, to receive email use pop3
+
+sender -> sender's SMTP servers -> receivers SMTP server -> receiver
+terminal pe          -type=mx gmail.com
+
+-- client authorize popserver 
+which further transact to; client...
+
+IMAP -> internet message access protocol....
+     synchonization kiya....
+
+
+
+----- DNS (domain Naming System )
+        -> phonebook 
+domain names are mapped to IP addresses...
+     DNS is part of application layer
+
+google.com search kiya http ne IP address  find karke laaya.......
+Databases are classified into various domains....
+
+mail.google.com
+subdomain(mail)      second level domain (google)     top level domain(com)
+
+Root DNS servers (top level domain) -> first point of contact...
+         .io      .org        .com   
+
+check on root server .org           (managed by ICANN) -> they register domains...
+
+how search happens?
+
+say search google.com
+
+1. check in your own computer
+2. check in local dns server (your local service provider)
+3. then check in root server 
+4. top level domain (answer as IP address)
+5. google.com server
+
+
+--------- you can't purchase a domain , you can only rent ....
+dig google.com                                      on terminal to see DNS lookup utility...
+
+
+----- Transport layer vs Network Layer ---------
+
+transport layer 
+       ->transportation part is done by network layer
+-> transport layertakes the message from the network and put it into application...(i.e. within the computer)
+
+box ----(transport layer) ------> courier company in your company -------(network layer) ----> courier company of friends country  -------- > (transport layer) ---------> box
+
+----- maan lo aapko 15 files apne friend ko send karni hai......... then network layer will transport and handle this...
+but kon si file kis application mai jayegi friend ke ye to ...aapka transport layer decide karega...
+
+
+let's say you are doing...
+
+message                           message 
+file                                      file 
+video conference             video conference
+
+multiplexing and demultiplexing concept ke through hota hai ye....
+client side pe transport layer multiplexing hui......  and aapka server side pe demultiplexing hui...
+
+sockets establish connection between two applications.....
+
+data travels in packets ----> transport layer will attach these socket port numbers....
+
+-> transport layer takes care of congestion control.....
+-> congestion control algorithm builts in TCP.....
+
+
+--> checksums: 
+       data will have checksum associated with it...
+        final value should be same at both friends end.....
+
+------how would I know that my packet has been transferred or not??
+ 
+you send the packet and you willl start the timer......
+when you recieve the acknowledgement timer ends...
+
+but ackn aaya hi nahi tab aapka timer expire ho jaega...... mai to yahi manunga ki data pahcha nahi dubara send kar dunga....but agar waha pahuch gaya hota..tab to waha double ho hogya....
+isliye hum sequence number ka use karte hai......
+
+
+IP is your network layer protocol........
+
+UDP -> user Datagram Protocol
+       -> data may or may not be delivered
+        -> data may change
+        -> data may not be in order
+        -> connectionless protocol
+         -> UDP uses checksum , but don't resolve signal lost problems...
+
+UDP packet consists of : 
+      source port number 2 bytes
+      Destination port number 2 bytes 
+       length of datagram / packet 2 bytes
+      checksum 2 bytes
+       data 65536 bytes
+
+use cases of UDP: 
+    UDP is faster 
+    video conferencing app
+    Domain Naming System uses UDP
+    gaming apps
+
+sudo tcpdump -c 5                                  paach packet show kar dega..
+
+
+
+
+---- explain how TCP works?
+
+transmission control protocol
+-> it is a transport layer protocol
+-> application layer sends lots of raw data...
+-> TCP segments this data -> divide in chunks and add headers...It may also colllect the data network layer....
+-> congestion control
+-> takes care of : 
+       when data does not arrive
+       maintain the order of data
+
+----features of tcp
+-. connection oriented
+-> error control
+-> congestion control
+-> full duplex (both can transfer to one another also simultaneoulsy)
+-> one tcp connecton is between two computers only....
+
+
+-------- 3 way handshake ---------
+
+client ------(synchronisation flag, sequence number) ----> server   ---- (ACK , seq no.) -----> client --------(ACK) ---- server
+
+
+for safety reasons , sequence numbers are generated randomly....
+ack no. = seq no. + 1 
+
+--------- TCP (network layer) -------------
+
+transport layer  mai  data travels in form of      Segments.
+Network layer main data transfers in form of    Packets.
+Data link layer mian data transfers in form of frames..
+
+----- In network layer ----------
+     we work with routers...
+     
+packet will consist of : 
+         network layer address of the source
+         network layer address of the destination
+         aapki personal chat
+
+ek hi network hai usme beech mai kitne hi router connected honge......
+          beech mai sab apne apne routing table mai check karte hai.... jhaank ke aage bhej dete hai.... kholega to wahi..
+        hop by hop travel karega packet jab tak destination na phuch jaye....
+
+
+192.168.2.30
+
+isme pehle teeen code aapka denotes network address (192.168.2)  or SUBNET ID  and appka last wala code defines your device address (30)   HOST ID
+
+
+---- who create this routng table??
+ans ; control Plane;               ek graph hi maan lo.....
+           routers -> nodes
+          links b/w routers -> edges
+
+1. static routing 
+     manually
+
+2. dynamic Routing 
+     dijakstra's algorithm wagera use karna....
+
+
+----- Internet Protocol (IP) ------------
+1. IPv4       => 32 bit, 4 words
+
+5.6.9.4
+ab inko binary mai convert kar dega...
+
+
+
+2. IPv6     => 128 bits, 
+
+
+------ hopping hoti hai... seedhe ISP se     padosi ke router se nahi......
+
+
+----- class of IP addresses -------
+
+class A    :   0.0.0.0      to 127.255.255.255 
+class B   :    128.0.0.0     to    191.
+class C :     192.0.0.0       to   223.
+class D    :   224 se 239 tak           sabke hi aage 255 laga do...
+class E    :   240.0.0.0          to 255.255.255.255
+
+
+
+------ subnet masking -------
+
+
+--- variable length subnet     12.0.0.0/31            => 31 bit will be occupied by subnet...
+
+
+
+------ IETF  ------- internet Engineering Task Force
+
+
+local host: 127.0.0.1
+        loopback addresses....
+
+------- packets -------
+  header is of 20 bytes..
+   ipv, length, identification number, flags, protocols, checksum, address, TTL tim to live , etc..
+
+
+
+ttl = 60 matlab agar 60 hop ke baad bhi packet destination tak nahi pahucha..... to packet drop kar dena ...
+
+---- IPv6
+       2power128        matlab 3.4 * 10power38      this much amount of unique ip address wll be generated...
+
+disadvan: not backward compatible.
+                 requires a lot of effort to shift ISPs, lot of hardware work....
+
+
+8 digit number hoga and each digit is a hexadecimal number....16 bit ka hoga ek number...
+a:a:a:a:a;a:a:a
+
+ABFE: f001:3201:9181:0:0:1;3
+
+yaha ipv6 mai bhi prefix kar sakte hai ki aage ke itne to fix hi rahenge.....baad ke change ho sakte hai....
+
+1:0:0:9
+
+--------  middleboxes -----
+extra devices that also interact with the IP packets...
+example: 
+       1. firewall -> filter out IP packets based on various rules...    two types... globlal internet    ... your trusted network...
+             address, modify packets, port numbers, flags, protocols....
+
+-> stateless vs stateful firewalls...
+                            (more efficiently)
+
+         2. NAT (network address Translation) 
+
+
+
+
+
+-------- data link layer -----
+transport data 
+new device conncected to DHCP server....
+many devices connected in LAN...
+       they communicate via data link address.... (ya bole to MAC address)
+
+pehle ARP (address resolution protocol) cache mai dekha....
+
+
+---- Data link layer address of sender and IP address of destination.....
+=> data link layer works close with physical layer...
+data link layer works with MAC address....
+
+ 
+you may check 
+framing error detection.....
+
+
+
+

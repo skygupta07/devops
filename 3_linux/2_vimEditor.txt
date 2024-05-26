@@ -1,0 +1,148 @@
+there are three modes
+    1. command mode
+    2. insert mode
+    3. extended mode
+
+    esc daba ke mode change.
+    :q to quit 
+    :w to save 
+    :wq to save and exit
+    :q! to forcefully quit without saving
+
+    : se nu        -> code ki numbering kar di...
+    shift + g daba ke ekdum neeche aagaye code ke..
+    gg       gor to first line or beginning of the page.
+    G      to go to end of the page
+
+    yy se to copy a line...
+    pp se paste chota p bada p
+
+    dd  se aapka delete ho jaega...
+    u    se undo kardi cheeje...
+
+    dd p is cut paste...
+
+    w    to move the cursor forward, word by word....
+    u     to undo last change...
+
+
+/network            ba jaha bhi network hoga use search karke dega -> command mode mai hi to 
+karega...
+
+--------
+
+ls -l        to get more info about each file....
+
+-rw----------     hyphen se suru hua hai matbal ye to file hai...
+
+drwxr -xr-x        d se suru hua hai matlab aapka yeh to directory hai....
+
+brw -rw            b se suru matlab bloked file jaise ki hardisk ki file
+
+crw                character file -> mechanism used for input and outpur, such as files in /de
+
+s                socket -> a file that produces inter-process networking protected by the file 
+                system's access control.
+
+p               pipe ->  a special file that allows processes to communicate with each 
+                        other without using network socket semantics...
+
+mkdir -p /opt/dev/ops/devops/test
+
+matlab hypen p    lagane ke baad puri ek nayi directory bhi create kar sakte ho....
+usme chahe beech wale directories exist karti ho ya na karti ho....
+
+
+ln -s jiskaBadaNaamhaiuskafullPath jonayaNameRAKHnaChahteHO
+
+ln -s <originalFilePath> <linkFilePath>             command is used to create soft link..    se ek tarah se link kar diya..
+
+history         issey puri history aa jaegi...
+
+file <filePath>           command is used to find file type....
+
+
+------ filter and IO redirection command --------
+
+1.   grep firewall anaconda-ks.cfg
+    grep command ki help se anaconda wali file mai jaha jaha bhi firewall likha hoga
+    wo show ho jaega.....
+
+     grep -i firewall anaconda-ks.cfg
+
+     -i laga dene se aapka case sensitivity chala gyaa ab saare naam dikha dega...
+
+
+     grep -iR firewall *
+
+     current working directory mai saari directories(R ke karan) dekhi and jisme bhi 
+     unsensitive firewall naam mila usey dikahaya....
+
+
+     grep -vi firewall anaconda.ks.cfg
+
+     matlab anaconda file ka wo saara content dikhao....jisme firewall word na aaye...
+
+     less 
+
+     issey readalbe format mai dikha diya....
+
+     head <filepath>       
+        upar ka maak dikha diya...
+
+    tail -f <filpath>
+
+    troubleshooting ke liye helpful as you are able to see the content of file changing in 
+    real time...
+
+    cut -d: -f4 /etc/passwd
+
+    to see only whatever field I want to see...
+    good when we have proper separator...
+
+
+    awk -F' :' ' {print $1}' /etc/passwd
+
+    issey first column aa jaega....
+
+    vim editor mai jaake
+    :%s/covid19/coronavirus/g
+
+    search karega current file mai jaha bhi covid19 dikhega ussey globally (har jagah)
+    coronavirus se replace kar dega...
+
+
+    sed 's/coronavirus/covid19/g' *
+
+    --- jab aage ek saath kai file mai setting change karni hogi....then very helpful...
+
+
+uptime > /tmp/sysinfo.txt
+
+ab content direct screen pe show na karke given file mai forward kar diya...
+in case if that file not exist, to ye create kar dega...
+single arrow to update kar dega
+
+double arrow aapka aage append kar dega...
+
+echo     is your print command...
+
+cat /dev/null > /tmp/sysinfo.txt
+ 
+null file ko forward kar diya sysinfo wali mai matlab ek tarah se delete hi kar diya sysinfo 
+file ko...
+
+ek extra attribut aur de diya :
+    1 -> standard output
+    2 -> standard error    show karega....
+
+ls | wc -l 
+
+issey pata chal jaega kitni files hai total uss directory mai...
+yeh piping wala concept hai....
+
+
+pehle updatedb        kiya then 
+search kiya 
+
+

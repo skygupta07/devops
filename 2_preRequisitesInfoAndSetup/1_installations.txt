@@ -1,0 +1,105 @@
+--- github ki apni repo batayi jispe se code wagera milega...
+
+---tools ----
+1. oracle VM virtual box
+2. git bash
+3. vagrant
+4. chocolatey (windows) / brew (mac)
+
+5. JDK8
+6. MAVEN
+7. INTELLIJ
+8. sublime text editor
+9. aws cli
+
+---- signup -----
+1. github
+2. domain purchase (go daddy)
+3. dockerhub
+4. sonarcloud
+
+---- aws ---- 
+1. free tier account
+2. IAM with MFA
+3. billing alarm
+4. certificate setup
+
+---- homebrew -----
+-> homebrew install kara now ab koi bhi application kucch bhi install karna hoga to bas 
+ussey jaake homebrew pe search karunga and uska code bas terminal pe paste kar do khud 
+hi install kar dega...
+
+
+----
+mene godaddy pe jaake ek domain purchase kar liya now aws pe jaake usko apna banwaya
+certificate generate kiya...validate kiya godaddy ne ke this domain belongs to you 
+and provided you the certificate....
+
+-- billing wagera access karne ke liye root account se login kiya....
+else majority of time iam user se hi cheeje hoti hai...
+
+----life before virtualization ---
+-> to run app/services we need servers.
+-> physical computers (servers in datacenter)
+-> one service - one server (isolation)
+-> servers are always overprovisioned.
+-> server REsources mostly underutilized.
+-> huge cap ex and operational expenditure
+
+----what is virtualization ---------
+-> enter VMware
+-> allows one computer to run multiple OS.
+-> partition physical resource in virtual resource.
+-> virtual machines runs in isolated environment.
+-> each virtual machine needs its own OS.
+-> server virtualization is the most common virtualization.
+
+--terminlogies 
+1. host os -> apne laptop ka os
+2. guest os -> jo agar hum vm create karenge uska os.
+3. vm -> virutal machine
+4. snapshot -> taking backup of virtual machine.
+5. hypervisor -> tool or software to create VM  
+    -> type 1 
+        -> bare metal 
+        -> runs as a base os.
+        -> production
+        -> e.g. VMware esxi, Xen hypervisor
+    
+    -> type 2 
+        -> runs a software
+        -> learn and test purpose
+        -> oracle virtual box.
+
+
+==> thumb rule 1 -> if you want to automate something , make sure you know how to do it 
+manually...
+
+--- why vagrants for VMs------
+
+1. no OS installation 
+    -> VM images/box.
+    -> free box available on vagrant cloud.
+
+2. vagrantFile
+    -> manage all vm settings in a file 
+    -> vm changes throug vagrantfile.
+    -> provisioning.
+
+3. simple commands.
+    -> vagrant init boxname.
+    -> vagrant up
+    -> vagrant halt
+    -> vagrant reload
+    -> vagrant destroy..
+
+---- mac m1 mai oracle vm nahi run karta so we will use vagrant + VMware...
+
+macbook ke liye vagrantcloud mai vmware_desktop kiya and arm wali setting lagai coz m1 arm deta hai..
+
+-> vagrant up
+-> vagrant ssh
+
+
+
+

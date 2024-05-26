@@ -1,0 +1,407 @@
+[vagrant@localhost ~]$ history
+    1  clear
+    2  whoami
+    3  exit
+    4  clear
+    5  whoami
+    6  pwd
+    7  ls
+    8  cat /etc/os-release
+    9  sudo -i
+
+[root@localhost ~]# history
+    1  whoami
+    2  pwd
+    3  ls
+    4  clear
+    5  cd /
+    6  pwd
+    7  ls
+    8  pwd
+    9  cd /bin
+   10  ls
+   11  clear
+   12  cd  /sbin/
+   13  ls
+   14  clear
+   15  cd /etc/
+   16  ls
+   17  cat /etc/hostname
+   18  clear
+   19  cd /tmp/
+   20  ls
+   21  cd /boot/
+   22  ls
+   23  cd grub
+   24  ls
+   25  cd ..
+   26  cd grub2/
+   27  ls
+   28  clear
+   29  pwd
+   30  cd
+   31  pwd
+   32  cd /proc/
+   33  ls
+   34  uptime
+   35  cat /proc/uptime
+   36  free -m
+   37  clear
+   38  ls
+   39  cd
+   40  clear
+
+
+
+   -------------------------2
+
+   14  clear
+   15  ls
+   16  pwd
+   17  mkdir dev
+   18  mkdir ops bakupdir
+   19  ls
+   20  pwd
+   21  touch testfile1.txt
+   22  ls
+   23  touch devopsfile{1..10}.txt
+   24  ls
+   25  cp devopsfile1.txt dev/
+   26  ls dev/
+   27  ls
+   28  cd /tmp/
+   29  ls
+   30  ls /home/vagrant/dev/
+   31  cd
+   32  clear
+   33  ls
+   34  pwd
+   35  cd /tmp/
+   36  cp /home/vagrant/devopsfile2.txt /home/vagrant/dev/
+   37  cd ~
+   38  pwd
+   39  ls
+   40  cp dev bakupdir/
+   41  ls bakupdir/
+   42  ls /home/vagrant/bakupdir/
+   43  cp -r dev bakupdir/
+   44  ls bakupdir/
+   45  ls /home/vagrant/bakupdir/
+   46  clear
+   47  cp --help
+   48  clear
+   49  pwd
+   50  ls
+   51  mv devopsfile3.txt ops/
+   52  ls ops/
+   53  mv ops dev/
+   54  ls
+   55  ls dev/
+   56  ls
+   57  mv testfile1.txt testfile22.txt
+   58  ls
+   59  clear
+   60  ls
+   61  mkdir textdir
+   62  ls
+   63  mv *.txt textdir/
+   64  ls
+   65  cd textdir/
+   66  ls
+   67  rm devopsfile10.txt
+   68  mkdir mobile
+   69  ls
+   70  rm mobile
+   71  rm -r mobile
+   72  ls
+   73  clear
+   74  ls
+   75  mkdir testdir{1..5}
+   76  ls
+   77  rm -rf *
+   78  ls
+   79  pwd
+   80  cd
+   81  ls
+   82  rm -rf *
+   83  ls
+   84  history
+
+
+------------ 3 
+
+ROOT
+52  pwd
+   53  ls -l
+   54  mkdir devopsdir
+   55  ls -l
+   56  file anaconda-ks.cfg
+   57  cd /bin/
+   58  ls -l
+   59  file yum
+   60  file /bin/pwd
+   61  cd
+   62  clear
+   63  ls -l
+   64  file devopsdir
+   65  cd /dev/
+   66  ls -l
+   67  cd
+   68  clear
+   69  pwd
+   70  ls
+   71  mkdir /opt/dev/ops/devops/test
+   72  mkdir -p /opt/dev/ops/devops/test
+   73  mkdir  /opt/dev/ops/devops/test
+   74  vim /opt/dev/ops/devops/test/commands.txt
+   75  ln -s /opt/dev/ops/devops/test/commands.txt cmds
+   76  ls -l
+   77  cat cmds
+   78  mv /opt/dev/ops/devops/test/commands.txt /tmp/
+   79  ls -l
+   80  mv /tmp/commands.txt /opt/dev/ops/devops/test/commands.txt
+   81  ls -l
+   82  clear
+   83  ls -l
+   84  unlink cmds
+   85  ls -l
+   86  ln -s /opt/dev/ops/devops/test/commands.txt cmds
+   87  ls -l
+   88  ls -lt
+   89  ls -ltr
+   90  ls -ltr  /etc/
+   91  vim /etc/hostname
+   92  hostname centos7.devops.in
+
+VAGRANT
+99  sudo -i
+  100  clear
+  101  hostname
+  102  ls -ltr /etc/
+  103  clear
+  104  history
+  105  sudo -i
+
+
+----- 4 ------
+
+94  ls
+   95  clear
+   96  ls
+   97  grep firewall anaconda-ks.cfg
+   98  grep Firewall anaconda-ks.cfg
+   99  grep -i Firewall anaconda-ks.cfg
+  100  vim anaconda-ks.cfg
+  101  grep -i firewall anaconda-ks.cfg
+  102  grep -i firewall < anaconda-ks.cfg
+  103  grep -i firewall ls
+  104  ls
+  105  grep -i firewall *
+  106  clear
+  107  grep -i firewall *
+  108  grep -iR firewall *
+  109  cp anaconda-ks.cfg devopsdir/mybootingfile.cfg
+  110  grep -iR firewall *
+  111  clear
+  112  cd /etc/
+  113  ls
+  114  cd NetworkManager/
+  115  lsa
+  116  ls
+  117  vim NetworkManager.conf
+  118  cd ..
+  119  ls
+  120  cd selinux/
+  121  ls
+  122  cat config
+  123  cd
+  124  clear
+  125  grep -i selinux /etc/
+  126  grep -i selinux /etc/ -R
+  127  clear
+  128  grep SELINUX /etc/ -R
+  129  clear
+  130  grep -R SELINUX /etc/*
+  131  vim /etc/selinux/config
+  132  clear
+  133  grep -vi firewall anaconda-ks.cfg
+  134  clear
+  135  less anaconda-ks.cfg
+  136  more anaconda-ks.cfg
+  137  clear
+  138  head anaconda-ks.cfg
+  139  head -20 anaconda-ks.cfg
+  140  head -2 anaconda-ks.cfg
+  141  clear
+  142  tail anaconda-ks.cfg
+  143  tail -2 anaconda-ks.cfg
+  144  tail -f anaconda-ks.cfg
+  145  clear
+  146  cd /var/log/
+  147  ls
+  148  tail -f yum.log
+  149  ls
+  150  clear
+  151  cat messages
+  152  clear
+  153  tail -f /var/log/messages
+  154  cd
+  155  clear
+  156  cat /etc/passwd
+  157  clear
+  158  cut -d: -f1 /etc/passwd
+  159  cut -d: -f3 /etc/passwd
+  160  cut -d: -f4 /etc/passwd
+  161  clear
+  162  awk '{print $1}' /etc/passwd
+  163  awk -F':' '{print $1}' /etc/passwd
+  164  clear
+  165  awk -F':' '{print $1}' /etc/passwd
+  166  ls
+  167  cat cmds
+  168  clear
+  169  vim samplefile.txt
+  170  clear
+  171  cat samplefile.txt
+  172  vim samplefile.txt
+  173  cat samplefile.txt
+  174  sed 's/coronavirus/covid19/g' samplefile.txt
+  175  cat samplefile.txt
+  176  sed -i 's/coronavirus/covid19/g' samplefile.txt
+  177  cat samplefile.txt
+  178  sed -i 's/covid19/nothing/g' samplefile.txt
+  179  cat samplefile.txt
+
+
+---------5 -------
+
+181  uptime
+  182  cat /etc/passwd
+  183  clear
+  184  uptime > /tmp/sysinfo.txt
+  185  cat /tmp/sysinfo.txt
+  186  ls
+  187  ls > /tmp/sysinfo.txt
+  188  cat /tmp/sysinfo.txt
+  189  uptime >> /tmp/sysinfo.txt
+  190  cat /tmp/sysinfo.txt
+  191  clear
+  192  uptime
+  193  free -m
+  194  df -h
+  195  echo "Good Morning"
+  196  echo "########################################" > /tmp/sysinfo.txt
+  197  date > /tmp/sysinfo.txt
+  198  echo "########################################" >> /tmp/sysinfo.txt
+  199  uptime >> /tmp/sysinfo.txt
+  200  echo "########################################" >> /tmp/sysinfo.txt
+  201  free -m >> /tmp/sysinfo.txt
+  202  echo "########################################" >> /tmp/sysinfo.txt
+  203  df -h >> /tmp/sysinfo.txt
+  204  echo "########################################" >> /tmp/sysinfo.txt
+  205  cat /tmp/sysinfo.txt
+  206  clear
+  207  yum install vim -y > /dev/null
+  208  cat /dev/null
+  209  cat /tmp/sysinfo.txt
+  210  cat /dev/null > /tmp/sysinfo.txt
+  211  cat /tmp/sysinfo.txt
+  212  clear
+  213  free -m > /dev/null
+  214  freeeee -m > /dev/null
+  215  freeeee -m 2>> /tmp//error.log
+  216  cat /tmp/error.log
+  217  free -m 1>> /tmp//error.log
+  218  cat /tmp/error.log
+  219  free -m &>> /tmp//error.log
+  220  freesdsd -m &>> /tmp//error.log
+  221  cat /tmp/error.log
+  222  cd /var/log/
+  223  ls
+  224  cd
+  225  clear
+  226  wc -l /etc/passwd
+  227  wc -l < /etc/passwd
+  228  clear
+  229  cd /etc/
+  230  ls
+  231  clear
+  232  ls | wc -l
+  233  ls | grep host*
+  234* ls | grep host*
+  235  clear
+  236  ls | wc -l
+  237  ls | grep host*
+  238  ls | grep host
+  239  tail /var/log/messages | grep -i vagrant
+  240  tail -20 /var/log/messages | grep -i vagrant
+  241  free -m
+  242  free -m | grep Mem
+  243  ls -l | tail
+  244  ls -l | head
+  245  clear
+  246  cd
+  247  find /etc -name host*
+  248  find / -name host*
+  249  clear
+  250  locate
+  251  yum install mlocate -y
+  252  clear
+  253  updatedb
+  254  locate host
+  255  clear
+
+
+-------6 -------
+258  whoami
+  259  cat /etc/passwd
+  260  head -1 /etc/passwd
+  261  clear
+  262  head -1 /etc/passwd
+  263  grep vagrant /etc/passwd
+  264  cat /etc/passwd
+  265  clear
+  266  cat /etc/group
+  267  clear
+  268  grep vagrant /etc/passwd
+  269  grep vagrant /etc/group
+  270  id vagrant
+  271  clear
+  272  useradd ansible
+  273  useradd jenkins
+  274  useradd aws
+  275  tail -4 /etc/passwd
+  276  tail -4 /etc/group
+  277  id ansible
+  278  groupadd devops
+  279  clear
+  280  usermod -aG devops ansible
+  281  id ansible
+  282  grep devops /etc/group
+  283  vim /etc/group
+  284  id aws
+  285  clear
+  286  passwd ansible
+  287  passwd aws
+  288  passwd jenkins
+  289  clear
+  290  su - ansible
+  291  clear
+  292  last
+  293  who
+  294  lsof -u vagrant
+  295  yum install lsof -y
+  296  clear
+  297  lsof -u vagrant
+  298  clear
+  299  lsof -u aws
+  300  userdel aws
+  301  ls /home/
+  302  userdel -r jenkins
+  303  ls /home/
+  304  groupdel devops
+  305  userdel -r ansible
+  306  ls /home/
+  307  rm -rf /home/aws
+  308  clear
+

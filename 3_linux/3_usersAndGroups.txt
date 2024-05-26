@@ -1,0 +1,100 @@
+----- users ----------
+
+1. users and groups are used to control access to files and resources.
+2. users login to the system by supplying their username and password.
+3. every file on the system is owned by a user and associated with a group.
+4. every process has an owner and group affiliation, and can only access the resources
+its owner or group can access.
+
+5. every user of the system is assigned a unique user ID number (the UID)
+6. users name and UID are stored in /etc/passwd
+7. user's password is stored in etc/shadow in encrypted form.
+
+8. users are assigned a home directory and a program that is run when they login (usually a shell)
+9. users cannot read, write or execute each other's files without permission.
+
+
+
+
+userdel aws 
+    aws naam ka user delete ho jaega...
+
+groupdel devops
+    devops group delete ho jaega...
+
+lsof -u username        
+    will list files opened by user.
+
+root user can reset any users password by using passwd username command, also
+user can reset its own password by running just passwd command.
+
+
+su - username
+    -> to switch between users in linux cli...
+
+users password is stored(encrypted) in etc/shadow file...
+
+
+---- file permissions --------
+
+-- viewing permissions from the command line --------
+
+-> file permissions may be viewed using ls -l
+
+----------     10 dash honge...
+first dash  => file type 
+aage ke teen dash => user
+phir aage ke teen dash => group 
+aur last ke teen dash => others
+
+r => read permission 
+w => write permission 
+x => execute permission 
+
+chown -R ansible: devops /opt/devopsdir
+    owner change karne ke liya ...ansible user ka naam group ka naam hai devops...
+
+
+--- changing permissions -------
+-> to change access modes:
+    chmod [-option]... mode[,mode] dile directory
+-> mode includes
+    u g or o for user group and other.
+    + - or = for grant deny or set.
+    r, w or x read write execute
+
+-> options include 
+    -R  recursive 
+    -v verbose
+    --reference
+
+-> examples:
+    chmod ugo +r file           grant read access to all for files.
+    chmod o -wx dir             deny write and execute to others for dir.
+
+=> changing permissions - numeric methods
+
+-> uses a three digit mode number 
+    -> first digit specifies owner's permissions
+    -> second digit specifies group permissions
+    -> third digit represents others permissions.
+
+-> permissions are calculated by adding:
+    4 (for read)
+    2 (for write)
+    1 (for execute)
+
+-> example 
+    chmod 640 myfile
+        6 matlab 4 + 2 permission i.e. both read and write permmision for user 
+        read for group 
+        and no permission for other...
+
+
+chmod +x <filePath>      command will give execute permission to all users on the 
+filepath...
+
+
+
+
+

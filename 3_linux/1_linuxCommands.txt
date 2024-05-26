@@ -1,0 +1,85 @@
+1. intro to linux
+2. basic cli commands.
+3. understanding files in linux.
+4. filters and redirection
+5. users and groups.
+6. sudo
+7. software management.
+8. services and processes
+9. good to know commands.
+10. server management
+
+we will master 
+1. commands 2. files 3. softwares 4. servers.
+
+-> open source -> open source software is software with source code that anyone can 
+inspect, modify, and enhance.
+-> open source doesn't mean it is freee...
+
+------ linux principles ---
+-> everything is a file (including hardware)
+-> small single purpose programs.
+-> ability to chain programs together ofro complex operations.
+-> avoid captive user interface 
+-> configuration data stored in text file.
+
+--- why linux? ---
+1. opensource
+2. communtiy support
+3. support wide variety of hardware 
+4. customization
+5. most servers runs on linux.
+6. automation.
+
+
+---popular linux distros----
+1. ubuntu linux
+2. linux mint
+3. arch linux
+4. fedora
+5. debian
+6. opensuse
+
+---popular server linux os -----
+1. red hat enterprise linux
+2. ubuntu server
+3. centos
+4. suse enterprise linux.
+
+
+--- your android is also linux ------
+
+-> RPM based : RHEL, centos, oracle linux
+-> Debain based: ubuntu server, kali linux.
+
+---- some important directories -----
+-> home directories 
+-> user executable 
+-> system executable
+-> ohter mountpoints
+-> configuration
+-> temporary files
+-> kernels and bootloader
+-> server data
+-> system information
+-> shared libraries.
+
+
+----- to copy file -------
+
+cp file1kaLocation file2KaLocation
+
+----- to copy directory -----
+cp -r dev backupdir/
+command options arguments
+
+uskaNaam --help => our friend no need to memorize
+cp --help
+
+---- move file or rename file-----
+mv opd dev1
+
+
+---- * matlab selecting all in the working directory or the specified one..
+rm -r *      kar diya to sab delete ho jaega us current working directory se...
+rm -rf *      f laga ke humne force diya...

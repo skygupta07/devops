@@ -1,0 +1,47 @@
+----------- ubuntu commands -------------
+
+-> the bigges difference between th two linux distributions is that ubuntu is based on the debian architecture 
+while centOs is forked form REDHat Enterprise Linux...
+
+apt command in ubuntu and yum in centos to manage packages.
+
+useradd devops
+su - devops 
+
+
+userdel -r devops
+
+but yaha aapka adduserccomaamdn hota hai...
+
+adduser devops
+
+-- ubuntu mai vim editor open  karne ke liye... pehle export EDITOR = vim                      karna padata hai...
+default text editor in ubuntu is nano, if you want to temporarily set vim as default editor then run below commanddddddddddddddddddddddddddd
+
+export EDITOR = vim
+visudo
+
+tree dibian package for ubuntu search kara ....
+wget <link>
+
+dpkg -i tree_1.7.0
+
+
+dpkg -l pipe grep tree
+
+apt update 
+
+apt install tree
+
+centos mai httpd yaha par apache2
+
+systemctl status apacje2
+
+apt upgrade
+apt remove apache2
+
+
+apt install apach2
+
+apt purge apache2           => ekdum badhiye se uninstall karega....
+ufw = ubuntu firewall sabko update kar dta...

@@ -1,0 +1,258 @@
+--------7 ---------------
+
+313  mkdir /opt/devopsdir
+  314  ls -l /opt/
+  315  groupadd devops
+  316  useradd ansible
+  317  useradd jenkins
+  318  useradd aws
+  319  useradd miles
+  320  vim /etc/group
+  321  id ansible
+  322  clear
+  323  ls -ld /opt/devopsdir
+  324  chown -R ansible:devops /opt/devopsdir
+  325  ls -ld /opt/devopsdir
+  326  chmod o-x /opt/devopsdir
+  327  ls -ld /opt/devopsdir
+  328  chmod o-r /opt/devopsdir
+  329  ls -ld /opt/devopsdir
+  330  chmod g+w /opt/devopsdir
+  331  ls -ld /opt/devopsdir
+  332  su - miles
+  333  su - aws
+  334  clear
+  335  mkdir /opt/webdata
+  336  ls -ld /opt/webdata/
+  337  chown aws.devops /opt/webdata
+  338  ls -ld /opt/webdata/
+  339  chmod 770 /opt/webdata
+  340  ls -ld /opt/webdata/
+  341  chmod 000 /opt/webdata
+  342  ls -ld /opt/webdata/
+  343  chmod 777 /opt/webdata
+  344  ls -ld /opt/webdata/
+  345  clear
+
+  ------------ 8-------
+
+  vagrant
+109  whoami
+  110  sudo yum install git -y
+  111  clear
+  112  yum install git -y
+  113  useradd test
+  114  sudo useradd test
+  115  sudo -i
+
+ROOT
+349  su - ansible
+  350  passwd ansible
+  351  su - ansible
+  352  clear
+  353  visudo
+  354  ls -l /etc/sudoers
+  355  visudo
+  356  su - ansible
+  357  visudo
+  358  su - ansible
+  359  clear
+  360  ls -l /etc/sudoers
+  361  visudo
+  362  cd /etc/sudoers.d/
+  363  ls
+  364  cat vagrant
+  365  cp vagrant devops
+  366  vim devops
+  367  cat *
+
+-----------9 ------------
+370  tree /var/log
+  371  curl https://rpmfind.net/linux/centos/7.9.2009/os/x86_64/Packages/tree-1.6.0-10.el7.x86_64.rpm -o tree-1.6.0-10.el7.x86_64.rpm
+  372  ls
+  373  rpm -ivh tree-1.6.0-10.el7.x86_64.rpm
+  374  tree /var/log/
+  375  clear
+  376  curl https://rpmfind.net/linux/centos/7.9.2009/os/x86_64/Packages/httpd-2.4.6-95.el7.centos.x86_64.rpm -o httpd-2.4.6-95.el7.centos.x86_64.rpm
+  377  ls
+  378  rpm -ivh httpd-2.4.6-95.el7.centos.x86_64.rpm
+  379  clear
+  380  rpm --help
+  381  clear
+  382  rpm -qa
+  383  clear
+  384  rpm -qa | grep tree
+  385  rpm -e tree-1.6.0-10.el7.x86_64
+  386  rpm -qa | grep tree
+  387  tree
+  388  clear
+  389  cd /etc/yum.repos.d/
+  390  ls
+  391  cat CentOS-Base.repo
+  392  clear
+  393  yum search httpd
+  394  cd
+  395  clear
+  396  yum install httpd
+  397  clear
+  398  yum remove httpd
+  399  yum install httpd
+  400  clear
+  401  yum search nginx
+  402  yum install nginx
+  403  clear
+  404  yum install jenkins
+  405  ls /etc/yum.repos.d/
+  406  clear
+  407  yum install wget -y
+  408  sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  409  cat /etc/yum.repos.d/jenkins.repo
+  410  rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+  411  yum install jenkins java-1.8.0-openjdk-devel -y
+  412  yum upgrade
+
+
+
+------ 10    --------
+
+415  yum install httpd -y
+  416  systemctl status httpd
+  417  systemctl start httpd
+  418  systemctl status httpd
+  419  clear
+  420  systemctl restart httpd
+  421  systemctl reload httpd
+  422  systemctl status httpd
+  423  exit
+  424  systemctl status httpd
+  425  clear
+  426  systemctl enable httpd
+  427  systemctl status sshd
+  428  clear
+  429  systemctl is-active httpd
+  430  systemctl status httpd
+  431  systemctl start httpd
+  432  systemctl status httpd
+  433  systemctl is-active httpd
+  434  clear
+  435  systemctl is-enabled httpd
+  436  cat /etc/systemd/system/multi-user.target.wants/httpd.service
+  437  clear
+  438  cat /etc/systemd/system/multi-user.target.wants/httpd.service
+
+
+11 -------------
+
+441  top
+  442  clear
+  443  ps aux
+  444  clear
+  445  ps -ef
+  446  clear
+  447  ps -ef | grep httpd
+  448  ps -ef | grep httpd | grep -v 'grep'
+  449  kill 1420
+  450  ps -ef | grep httpd | grep -v 'grep'
+  451  systemctl start httpd
+  452  ps -ef | grep httpd | grep -v 'grep'
+  453  kill -9 1476
+  454  ps -ef | grep httpd | grep -v 'grep'
+  455  clear
+  456  ps -ef | grep httpd | grep -v 'grep'
+  457  ps -ef | grep httpd | grep -v 'grep' | awk '{print $2}'
+  458  ps -ef | grep httpd | grep -v 'grep' | awk '{print $2}' | xargs kill -9
+  459  systemctl start httpd
+  460  ps -ef | grep httpd | grep -v 'grep' | awk '{print $2}'
+  461  ps -ef | grep httpd | grep -v 'grep' | awk '{print $2}' | xargs kill -9
+
+
+------- 12 ---------
+
+466  cd /var/log/
+  467  ls
+  468  ls jenkins/
+  469  clear
+  470  pwd
+  471  tar --help
+  472  clear
+  473  cd /var/log/
+  474  pwd
+  475  tar -czvf jenkins_06122020.tar.gz jenkins
+  476  ls -l
+  477  ls -ltr
+  478  file jenkins_06122020.tar.gz
+  479  clear
+  480  mv jenkins_06122020.tar.gz /tmp/
+  481  cd /tmp/
+  482  ls
+  483  tar -xzvf jenkins_06122020.tar.gz
+  484  ls
+  485  tar -xzvf jenkins_06122020.tar.gz -C /opt/
+  486  ls /opt/
+  487  cd
+  488  clear
+  489  tar --help
+  490  clear
+  491  cd /var/log/
+  492  yum install zip unzip -y
+  493  clear
+  494  ls
+  495  zip -r jenkins_06122020.zip jenkins
+  496  ls -ltr jenkins*
+  497  mv jenkins_06122020.zip /opt/
+  498  cd /opt/
+  499  ls
+  500  rm -rf jenkins
+  501  unzip jenkins_06122020.zip
+  502  ls
+  503  clear
+
+
+---------- 13 ----------
+
+1  whoami
+    2  pwd
+    3  ls
+    4  cat /etc/os-release
+    5  clear
+    6  useradd devops
+    7  su - devops
+    8  userdel -r devops
+    9  clear
+   10  adduser devops
+   11  id devops
+   12  clear
+   13  visudo
+   14  export EDITOR=vim
+   15  visudo
+   16  clear
+   17  wget http://archive.ubuntu.com/ubuntu/pool/universe/t/tree/tree_1.7.0-3_amd64.deb
+   18  ls
+   19  dpkg -i tree_1.7.0-3_amd64.deb
+   20  tree
+   21  dpkg -l
+   22  clear
+   23  dpkg -l | grep tree
+   24  dpkg -r tree
+   25  clear
+   26  cd /etc/apt/
+   27  ls
+   28  cat sources.list
+   29  clear
+   30  apt update
+   31  cd
+   32  clear
+   33  apt search tree
+   34  clear
+   35  apt install tree
+   36  clear
+   37  apt install apache2
+   38  systemctl status apache2
+   39  systemctl is-enabled apache2
+   40  clear
+   41  apt upgrade
+   42  apt remove apache2
+   43  clear
+   44  apt install apache2
+   45  apt purge apache2
+   46  clear

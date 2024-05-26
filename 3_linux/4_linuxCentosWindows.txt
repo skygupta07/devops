@@ -1,0 +1,135 @@
+sudo gives power to a normal user to execute commands which is owned b root user.
+-> if user has already full sudoers privilege, it can become a root user anytime.
+    -> sudo -i       changes from normal user to root user.
+                        -> only user in /etc/sudoers file or /etc/sudoers.d dir can use sudo -i command to switch 
+                           to root user.
+
+-> if user does not want to enter its password after running sudo command then:
+      -> Add NOPASSWD option in users entry in sudoers file as specified below
+          username ALL =(ALL:ALL) NOPASSWD:ALL
+
+->  if a normal user wants to run root commands and Admin cannot share root password as per compliance, then possible solution is : ask admin to add your username in sudoers file.
+
+
+
+------- software management --------------
+
+net se ek link copy kari usko linux shelll mai
+      curl <link> -o <desiredFilename>                         lika to wo net se download hone lagi..
+
+-> tree command pehle se nahi tha to online install kara and then tree ab use kiya to saari directory tree format 
+mai show hone lagi...
+
+linux mai kaafi baar dependency waala issue aata hai ...let's say you want to install httpd package....
+but to run it properly serveral other packages need to be install altogeher with it....
+in that case it is better to use the 
+                             yum install <packageName>
+
+backward slash laga ke single hi link ko do line mai likh diya....
+
+jenkins install karne ke liye official repository padhi 
+
+kucch command likh uske aage hyphen y likh diya matlab meri taraf se ha hai ..no more further questions please..
+
+yum grouplist               list all available group packages.
+yum groupinstall <groupName>              installs all the packages in a group.
+yum repolist                          list enabled yum repositories.
+
+--- to install single package in redhat and debian OS
+       ->   rpm -i packagename   in redHat os
+      -> dpkg -i packagename in debian os
+
+
+
+rpm -ivh <desiredFileName>               install karo magar human readable format mai saath ke saath cheeje print bhi karo..
+
+
+where are yum repos and apt files located?
+        /etcyum.repos.d/      for repos
+        /etc/apt/sources.list & /etc/apt/sources.list.d         for apt
+
+before installing package in ubuntu with apt command, we should run  
+        apt update
+     to refresh apt repository index.
+
+-> what is the command to download a filer from internet over a network.
+       wget URL
+      curl URL -o outputfile
+
+
+
+
+-------- services --------------
+kisi bhi service ko start / stop karne ke liye systemctl command ka use kiya....
+
+systemctl start httpd
+systemctl status httpd
+
+systemctl restart httpd
+systemctl reload httpd
+
+systemctl is active httpd              stauts baa deaga
+systemctl is -enabled httpd
+
+start karke then enable kar diya to service will run and comes up after reboot.
+
+
+jaise windows mai aapka task manager mai saari cpu utilisation dikh jaati hai ... similarly aapka linux mai
+      top 
+   command bas likh do issey saara pid user pr ni virt res shr s %cpu %mem time + command sab tabular format mai show kar dega...
+
+
+
+
+ps aux                            same top ki tarah saara ssaaman dikha ke quit kar dega...
+ps -ef                             yaha parent process id bhi shorw kar dega....
+
+ps -ef pipe grep httpd                                      issey saare httpd wale preocesses aa jaenge...
+
+process ko kill karne ke liye 
+            kill 1420 
+            issey 1420 wala process pehle apne child ko kill karega then khud ko bhi kill kar lega...
+
+
+kill -9 1476 
+      issey 1476 id waala parent process forcefully kill ho jaega but ab uske child orphan process ban gaye...
+
+
+ab inko kill karne ke liye aap
+ ps -ef pipe grep httpd pipe grep -v `grep` pipe awk `{print $2}' pipe  xargs kill -9
+
+ideal ko kill all the orphan processes...
+reboot your linux system ko kill all the orphan processes...
+
+kill -9 PID command is to stop process forcefully and kill PID is to stop process gracefully, child processes also
+will be stopped if parent process is stopped gracefully...
+
+-> a child process that remains running even after its parent process is terminated or completed without 
+waiting for the child process execution is called a orphan process. zombie process that has completed its task but still, it shows an entry in a process table.
+
+
+------ tar command ka use karke file ko archive kara...--------------
+
+tar -czvf jenkins_06122020.tar.gz
+
+c = compression
+z = gunZip
+v = verbose
+f = file
+
+---- let's say ab extract karna hai to.. you can extract by....
+
+tar -xzvf jenkins_06122020.tar.gz 
+
+x  = extract
+
+----- another method is zip command ---
+first install using 
+
+yum install zip unzip -y
+
+
+then after installation type 
+zip -r jenkins_06122020.zip jenkins
+
+history daba ke history bhi dekh li...
