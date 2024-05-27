@@ -53,24 +53,48 @@ inspect, modify, and enhance.
 -> Debain based: ubuntu server, kali linux.
 
 ---- some important directories -----
--> home directories 
--> user executable 
--> system executable
--> ohter mountpoints
--> configuration
--> temporary files
--> kernels and bootloader
--> server data
--> system information
--> shared libraries.
+-> home directories : /root , /home/username
+-> user executable : /bin, /usr/bin, usr/local/bin
+-> system executable : /sbin, usr/sbin, usr/local/sbin
+-> ohter mountpoints : /media, /mnt
+-> configuration : /etc
+-> temporary files: /tmp
+-> kernels and bootloader: /boot
+-> server data: /var, /srv
+-> system information: /proc, /sys
+-> shared libraries: /lib, /usr/lib, /usr/local/lib
 
+------------------------
+terminal khola -> cd/Desktop/vms/fedora kiya => vagrant up => vagrant ssh => 
+
+$ represents that it is a normal user shell
+whoami        se pata chal gya kaun sa user hai...
+sudo -i         use to switch to root user from vagrant user
+ek baar exit likh ke... root se vagrant user pe switch kar sakte hai...
+
+now this # represents root user shell
+
+cd /      karke root directory mai chale jaana -> ab bracket mai tilde se / ho gaya...
+
+cd hitEnter      to come back to user's home directory
+
+touch command to create empty file or update files
+
+
+
+
+
+
+vagrant ssh kiya login karne ke liye 
 
 ----- to copy file -------
 
 cp file1kaLocation file2KaLocation
 
 ----- to copy directory -----
-cp -r dev backupdir/
+cp -r directory1 directory2
+
+syntax:
 command options arguments
 
 uskaNaam --help => our friend no need to memorize
